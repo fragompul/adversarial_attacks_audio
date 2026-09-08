@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+speech_commands_data/
+*.egg-info/
+build/
+dist/
+.pytest_cache/

@@ -1,0 +1,19 @@
+# Research / notebook development environment for adversarial_attacks_audio.
+torch>=2.4.0
+torchaudio>=2.4.0
+# torchaudio's own `.load()` now requires TorchCodec + a separately installed FFmpeg to read audio;
+# soundfile reads WAV directly (Speech Commands is plain 16-bit PCM WAV) with no extra system deps
+soundfile>=0.12.0
+
+numpy>=2.1.0
+pandas>=2.2.0
+scikit-learn>=1.6.0
+scipy>=1.13.0
+
+matplotlib>=3.10.0
+seaborn>=0.13.0
+plotly>=5.24.0
+
+# Notebook execution
+jupyter>=1.0.0
+ipykernel>=6.29.0
