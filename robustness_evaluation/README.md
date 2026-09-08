@@ -1,0 +1,5 @@
+# Robustness Evaluation
+
+01_attack_comparison runs FGSM, PGD, and Waveform Square Attack against a real sample of test clips (up to 5 per class, 27 already correctly classified out of the 10 command classes) at a matched perturbation budget (epsilon 0.02 for the two gradient attacks, a 50-query budget for Square Attack), reporting attack success rate, SNR, and query cost side by side.
+
+PGD reaches 100% ASR, Square Attack reaches 77.8% with an average of only about 19 queries per clip despite never touching a gradient, and FGSM trails at 51.9%. FGSM's perturbation is also the loudest of the three (12.05dB average SNR, versus 16.95dB for PGD and 17.83dB for Square Attack), a reminder that a single full-magnitude gradient step is a cruder instrument than either an iterative gradient attack or a query-driven search that only keeps changes that actually help. The Square Attack result in particular is notable on its own: a black-box attack with no gradient access reaching most of PGD's success rate at a query cost that would be entirely practical against a real deployed system.
